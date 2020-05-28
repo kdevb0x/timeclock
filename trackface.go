@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io"
 
 	"gocv.io/x/gocv"
 )
@@ -49,6 +48,6 @@ func (fd *facedetector) Start() {
 	}
 
 }
-func (fd *facedetector) preview(out io.Writer) (stop func()) {
-
+func (fd *facedetector) Show() *gocv.Window {
+	return fd.window
 }

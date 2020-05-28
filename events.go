@@ -39,16 +39,16 @@ type Event struct {
 type EventType int
 
 const (
-	NONE EventType = iota
-	CLOCKIN
-	CLOCKOUT
+	None EventType = iota
+	ClockIn
+	ClockOut
 
 	// prefer the more specific types below
 
-	LUNCHSTART
-	LUNCHEND
-	SHIFTSTART
-	SHIFTEND
+	LunchStart
+	LunchEnd
+	ShiftStart
+	ShiftEnd
 )
 
 func (e *Event) UnmarshalJSON(data []byte) error {
